@@ -1,0 +1,19 @@
+{
+  "name": "micropostapi",
+  "version": "1.0.0",
+  "description": "Basic micropost api that processes basic CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tallain88/micropostApi.git"
+  },
+  "author": "Trevor Allain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tallain88/micropostApi/issues"
+  },
+  "homepage": "https://github.com/tallain88/micropostApi#readme"
+}

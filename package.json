@@ -4,7 +4,7 @@
   "description": "Basic micropost api that processes basic CRUD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/tallain88/micropostApi/issues"
   },
-  "homepage": "https://github.com/tallain88/micropostApi#readme"
+  "homepage": "https://github.com/tallain88/micropostApi#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  }
 }

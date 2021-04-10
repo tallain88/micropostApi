@@ -46,12 +46,12 @@ describe ('User Tests', function () {
         });
 
         beforeEach(function() {
-                testUser = new User({userName: 'Alberto', password: 'password'});
-                testUser.save()
-                .then(() => {
-                    done();
-                })
+            testUser = new User({userName: 'Alberto', password: 'password'});
+            testUser.save()
+            .then(() => {
+                done();
             })
+        })
 
         describe('/GET All Users', function () {
             it('Get Users', function (done) {

@@ -4,6 +4,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     User = require('./api/models/userModel'),
     Post = require('./api/models/postModel'),
+    Reply = require('./api/models/replyModel'),
+    Like = require('./api/models/likeModel'),
     bodyParser = require('body-parser');
 
 // Mongoose connection
@@ -21,10 +23,16 @@ app.use(bodyParser.json());
 // Routing
 var userRoutes = require('./api/routes/userRoutes');
 var postRoutes = require('./api/routes/postRoutes');
+var replyRoutes = require('./api/routes/replyRoutes');
+var likeRoutes = require('./api/routes/likeRoutes');
+
+// Register routes
 userRoutes(app);
 postRoutes(app);
+replyRoutes(app);
+likeRoutes(app);
 
-// 404 middleware
+// 404 middleware for 'not found' errors
 app.use(function(req, res) {
     res.status(404).send({url: '\'' + req.originalUrl + '\'' + ' not found'})
 });

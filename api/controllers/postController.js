@@ -21,7 +21,7 @@ exports.createPost = function(req, res) {
 };
 
 exports.getAllUserPosts = function(req, res) {
-    Post.findMany({userId: req.params.userId}, function(err, post) {
+    Post.find({userId: req.params.userId}, function(err, post) {
         if (err)
             res.send(err);
         res.json(post);
@@ -29,7 +29,7 @@ exports.getAllUserPosts = function(req, res) {
 };
 
 exports.getSinglePost = function(req, res) {
-    Post.find({$and: [{_id: req.params.postId}, {userId: req.params.userId}]}, function(err, post) {
+    Post.findById({_id: req.params.postId}, function(err, post) {
         if (err)
             res.send(err);
         res.json(post);
@@ -37,7 +37,7 @@ exports.getSinglePost = function(req, res) {
 };
 
 exports.deleteSinglePost = function(req, res) {
-    Post.remove({_id: req.params.postId}, function(err, post) {
+    Post.deleteOne({_id: req.params.postId}, function(err, post) {
         if (err)
             res.send(err);
         res.json({message: 'Post delete success'});

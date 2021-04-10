@@ -3,14 +3,12 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var ReplySchema = new Schema({
+var LikeSchema = new Schema({
     postId: {
         type: String,
+
     },
     userId: {
-        type: String,
-    },
-    body: {
         type: String,
     },
     date: {
@@ -19,4 +17,4 @@ var ReplySchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Replies', ReplySchema);
+module.exports = mongoose.model('Likes', LikeSchema);

@@ -16,11 +16,6 @@ var PostSchema = new Schema({
         type: String,
         required: 'Enter post content'
     },
-    replies: {
-        type: [{
-            type: Number
-        }]
-    },
     date: {
         type: Date,
         default: Date.now

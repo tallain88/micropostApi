@@ -11,13 +11,13 @@ module.exports = function (app) {
     app.route('/post/create')
         .post(post.createPost);
 
-    app.route('/post/:userId')
+    app.route('/post/user/:userId')
         .get(post.getAllUserPosts);
 
     app.route('/post/:postId')
         .put(post.updateSinglePost)
         .delete(post.deleteSinglePost);
 
-    app.route('/post/:userId/:postId')
+    app.route('/post/:postId/')
         .get(post.getSinglePost);
 }
